@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<title>Home</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../assets/dist/css/template.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<title></title>
 </head>
 <body>
-	
-<script src="../assets/vendor/jquery/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php echo $root; ?>dashboard/index_admin.php"><b>RENTAL MOBIL</b></a>
+            </div>
+            <!-- /.navbar-header -->
 
-    <!-- Custom Theme JavaScript -->
-    <script src="../assets/dist/js/template.js"></script>
-	
-	<!-- Metis Menu Plugin JavaScript -->
-    <script src="../assets/vendor/metisMenu/metisMenu.min.js"></script>
-
-	<script type="text/javascript">
-    $(document).ready(function() {
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-            $("#wrapper.toggled").find("#sidebar-wrapper").find(".collapse").collapse("hide");
-        });
-    });
-    </script>
+            <ul class="nav navbar-top-links navbar-right">
+				<li class="dropdown">
+				<?php 
+				if ($_SESSION['username']) : ?>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <?php echo $nama->username?> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        
+                        <li class="divider"></li>
+                        <li><a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+					
+                    <!-- /.dropdown-user -->
+				<?php endif; ?>	
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
 </body>
-
 </html>
