@@ -11,6 +11,9 @@
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="<?php echo base_url().'c_home' ?>dashboard/index_admin.php"><b>RENTAL MOBIL</b></a>
+    </div>
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
