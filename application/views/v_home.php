@@ -15,7 +15,7 @@
                 <h1 class="page-header">HOME</h1>
 			    <ol class="breadcrumb">
                     <li class="active">
-                        <i class="fa fa-arrow-circle-o-right"></i> Home
+                        <i class="fa fa-arrow-circle-o-right"></i> Home E-RENT
                     </li>
                 </ol>
             </div>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <a href="<?php echo base_url().'c_admin'?>">
+            <a href="<?php echo base_url().'c_mobil'?>">
                 <div class="panel-footer">
                     <span class="pull-left">Lihat Selengkapnya</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <a href="<?php echo base_url().'c_admin'?>">
+            <a href="<?php echo base_url().'c_pelanggan'?>">
                 <div class="panel-footer">
                     <span class="pull-left">Lihat Selengkapnya</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -70,7 +70,7 @@
                         <i class="fa fa-user fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div>Jumlah User</div>
+                        <div>Jumlah User Admin</div>
                     </div>
                 </div>
             </div>
