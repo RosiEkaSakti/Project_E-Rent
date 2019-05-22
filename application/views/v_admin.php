@@ -31,6 +31,44 @@
 					</div>
 				</div>
 			</div>
+            <div class="panel panel-primary">
+                        <div class="panel-heading">
+						<button data-toggle="modal" data-target="#myModal" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Admin</button></div>
+                        <div class="panel-body">
+							<div class="col-lg-8">
+								<!--muncul jika ada pencarian (tombol reset pencarian)-->
+								<a class="btn btn-default btn-outline" href="index.php"> Kembali </a>
+							</div>
+							<div>
+								<form method="post" action="index.php">
+									<div class="form-group input-group">
+										<span class="input-group-btn">
+											<button class="btn btn-primary" type="submit">Cari Username
+											</button>
+										</span>
+									</div>
+								</form>
+							</div>
+							<br><br>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:5px"><center>No</center></th>
+                                            <th style="width:200px"><center>Username</center></th>
+                                            <th style="width:200px"><center>Password<center></th>
+											<th style="width:30px"><center>Opsi</center></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</div>					
 	</div>
 </div>
