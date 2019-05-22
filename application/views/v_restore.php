@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<head><title>Home</title>
+<head><title>Home</title></head>
 <body>
 
-<div id="wrapper">
-
-        <!-- Navigation -->
-        <?php $this->load->view($sidebar) ;
-        ?>
+    <div class="wrapper">
+        <?php $this->load->view($sidebar)?>
 
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">RESTORE</h1>
-                    <ol class="breadcrumb">
+					<ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-arrow-circle-o-right"></i> Admin
-                            </li>
-                            <li class="active">
+							</li>
+							<li class="active">
                                 Restore
                             </li>
                     </ol>
@@ -40,9 +37,6 @@
                         <button type="submit" class="btn btn-primary" name="restore">Restore</button>
                 </form>
             </div>
-            
-        <!-- /#page-wrapper -->
-
-    </div>
-</body>
-</html>
+			
+        </body>
+    </html>
