@@ -7,7 +7,7 @@ class c_pengembalian extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_pengembalian',$data);   
+        $this->load->view('pengembalian/v_pengembalian',$data);   
     }
 }
 ?>

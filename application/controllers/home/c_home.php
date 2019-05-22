@@ -7,7 +7,7 @@ class c_home extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_home',$data);
+        $this->load->view('home/v_home',$data);
         
     }
 

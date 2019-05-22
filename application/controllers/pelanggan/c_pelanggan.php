@@ -7,7 +7,7 @@ class c_pelanggan extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_pelanggan',$data);   
+        $this->load->view('pelanggan/v_pelanggan',$data);   
     }
 }
 ?>

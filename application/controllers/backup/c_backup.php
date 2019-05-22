@@ -7,7 +7,7 @@ class c_backup extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_backup',$data);   
+        $this->load->view('backup/v_backup',$data);   
     }
 }
 ?>

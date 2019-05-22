@@ -7,7 +7,7 @@ class c_mobil extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_mobil',$data);
+        $this->load->view('mobil/v_mobil',$data);
         
     }
 

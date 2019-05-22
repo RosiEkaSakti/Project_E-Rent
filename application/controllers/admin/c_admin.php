@@ -7,7 +7,7 @@ class c_admin extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_admin',$data);   
+        $this->load->view('admin/v_admin',$data);   
     }
 }
 ?>

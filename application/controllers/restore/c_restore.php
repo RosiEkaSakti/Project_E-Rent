@@ -7,7 +7,7 @@ class c_restore extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_restore',$data);   
+        $this->load->view('restore/v_restore',$data);   
     }
 }
 ?>

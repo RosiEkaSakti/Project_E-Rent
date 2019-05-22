@@ -7,7 +7,7 @@ class c_transaksi_biaya extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_transaksi_biaya',$data);   
+        $this->load->view('transaksibiaya/v_transaksi_biaya',$data);   
     }
 }
 ?>

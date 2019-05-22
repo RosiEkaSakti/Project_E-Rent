@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <a href="<?php echo base_url().'c_mobil'?>">
+            <a href="<?php echo base_url().'mobil/c_mobil'?>">
                 <div class="panel-footer">
                     <span class="pull-left">Lihat Selengkapnya</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <a href="<?php echo base_url().'c_pelanggan'?>">
+            <a href="<?php echo base_url().'pelanggan/c_pelanggan'?>">
                 <div class="panel-footer">
                     <span class="pull-left">Lihat Selengkapnya</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <a href="<?php echo base_url().'c_admin'?>">
+            <a href="<?php echo base_url().'admin/c_admin'?>">
                 <div class="panel-footer">
                     <span class="pull-left">Lihat Selengkapnya</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

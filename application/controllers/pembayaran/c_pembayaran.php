@@ -7,7 +7,7 @@ class c_pembayaran extends CI_Controller {
         $data=array (
             'sidebar' => 'v_sidebar'
         );
-        $this->load->view('v_pembayaran',$data);   
+        $this->load->view('pembayaran/v_pembayaran',$data);   
     }
 }
 ?>
