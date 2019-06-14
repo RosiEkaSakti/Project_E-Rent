@@ -8,6 +8,7 @@ class c_home extends CI_Controller {
             'sidebar' => 'v_sidebar'
         );
         $this->load->view('home/v_home',$data);
+        $this->load->view('login', $data);
     }
 
     

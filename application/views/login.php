@@ -24,14 +24,15 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><center><!-- <img src="assets/gambar/wanitadotme.png" class="img-responsive" width="200px"/>--><b>E-RENT</b><center></h3>
+                        <h3 class="panel-title"><center>
+                            <b>E-RENT</b><center></h3>
                     </div>
                     <div class="panel-body" style="background-color: #30467f;">
 						<center>
 						<img src="assets/gambar/LOGO E-RENT FIX.jpg" class="img-responsive"/>
 						<center>
 						<br>
-                        <form method="post" action="c_home.php"  role="form">
+                        <form method="post" action="c_home"  role="form">
 						<?php 
 						if(isset($_GET['pesan'])){
 							if($_GET['pesan'] == "gagal"){

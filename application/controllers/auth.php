@@ -1,9 +1,10 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 class auth extends CI_Controller {
     public function index($error = NULL) {
         $data = array(
             'title' => 'login Page',
-            'action' => site_url('auth/login'),
+            'action' => site_url('auth/home'),
             'error' => $error
         );
         $this->load->view('login', $data);
@@ -22,6 +23,7 @@ class auth extends CI_Controller {
             $this->session->set_userdata($data);
 //            redirect ke halaman sukses
             redirect(site_url('tb_user'));
+
         } else {
 //            tampilkan pesan error
             $error = 'username / password salah';
