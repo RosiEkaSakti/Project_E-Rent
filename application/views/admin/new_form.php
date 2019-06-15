@@ -2,29 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<?php $this->load->view("admin/_partials/head.php") ?>
+	<title>Tambah data Admin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../assets/dist/css/template.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
-<body id="page-top">
+<body>
 
-	<?php $this->load->view("admin/_partials/navbar.php") ?>
 	<div id="wrapper">
-
-		<?php $this->load->view("admin/_partials/sidebar.php") ?>
 
 		<div id="content-wrapper">
 
 			<div class="container-fluid">
-
-				<?php $this->load->view("admin/_partials/breadcrumb.php") ?>
 
 				<?php if ($this->session->flashdata('success')): ?>
 				<div class="alert alert-success" role="alert">
 					<?php echo $this->session->flashdata('success'); ?>
 				</div>
 				<?php endif; ?>
-
 				<div class="card mb-3">
 					<div class="card-header">
 						<a href="<?php echo site_url('admin/c_admin/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
@@ -33,39 +35,20 @@
 
 						<form action="<?php base_url('admin/v_admin/add') ?>" method="post" enctype="multipart/form-data" >
 							<div class="form-group">
-								<label for="name">Name*</label>
-								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-								 type="text" name="name" placeholder="Product name" />
+								<label for="name">Username*</label>
+								<input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"
+								 type="text" name="username" placeholder="username" />
 								<div class="invalid-feedback">
-									<?php echo form_error('name') ?>
+									<?php echo form_error('username') ?>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="price">Price*</label>
+								<label for="price">Password</label>
 								<input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="number" name="price" min="0" placeholder="Product price" />
+								 type="password" name="password" min="0" placeholder="Password" />
 								<div class="invalid-feedback">
 									<?php echo form_error('price') ?>
-								</div>
-							</div>
-
-
-							<div class="form-group">
-								<label for="name">Photo</label>
-								<input class="form-control-file <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="file" name="image" />
-								<div class="invalid-feedback">
-									<?php echo form_error('image') ?>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="name">Description*</label>
-								<textarea class="form-control <?php echo form_error('description') ? 'is-invalid':'' ?>"
-								 name="description" placeholder="Product description..."></textarea>
-								<div class="invalid-feedback">
-									<?php echo form_error('description') ?>
 								</div>
 							</div>
 

@@ -35,15 +35,16 @@
             <div class="panel panel-primary">
                
                         <div class="panel-heading">
-						<button href="<?php echo site_url('admin/v_admin/add') ?>"data-toggle="modal" data-target="#myModal" class="btn btn-success btn-sm"><span class="fas fa-plus"></span> Tambah Data Admin</button></div>
+						<button href="<?php echo base_url().'admin/v_admin/new_form'?> "data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fas fa-plus"></span> Tambah Data Admin</button></div>
                         <div class="panel-body">
 							<div class="col-lg-8">
 								<!--muncul jika ada pencarian (tombol reset pencarian)-->
-								<a class="btn btn-default btn-outline" href="index.php"> Kembali </a>
+								<a class="btn btn-default btn-outline" href="<?php echo base_url().'home/c_home'?>"> Kembali </a>
 							</div>
 							<div>
-								<form method="post" action="index.php">
+								<form method="post" action="">
 									<div class="form-group input-group">
+                                        <input type="text" name="keyword" class="form-control" placeholder="Search Username...">
 										<span class="input-group-btn">
 											<button class="btn btn-primary" type="submit">Cari Username
 											</button>

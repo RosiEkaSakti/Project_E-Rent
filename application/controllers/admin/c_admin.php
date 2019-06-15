@@ -29,7 +29,7 @@ class c_admin extends CI_Controller {
             $this->session->set_flashdata('success', 'Berhasil disimpan'); // tampilkan pesan berhasil
         }
 
-        $this->load->view("admin/v_admin/new_form"); //tampilkan form add
+        $this->load->view("admin/new_form"); //tampilkan form add
     }
 
     public function edit($id = null)
@@ -38,7 +38,7 @@ class c_admin extends CI_Controller {
        
         $v_admin = $this->m_model; //objek model
         $validation = $this->form_validation; //objrk validation
-       $validation->set_rules($product->rules()); //menerapkan rules
+       $validation->set_rules($v_admin->rules()); //menerapkan rules
 
         if ($validation->run()) { // melakukan validasi
             $v_admin->update(); // menyimpan data
