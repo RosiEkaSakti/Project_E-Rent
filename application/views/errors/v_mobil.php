@@ -25,5 +25,17 @@
             <!-- /.row -->
 
  </body>
-</html>           
 
+ <table border="1">
+        <tr>
+            <th>Tambah</th>
+            <th>Delete</th>
+        </tr>
+        <?php foreach($user as $u){ ?>
+        <tr>
+            <td><?php echo $u->Tambah ?></td>
+            <td><?php echo $u->Delete ?></td>
+        </tr>
+        <?php } ?>
+    </table>
+</html>           

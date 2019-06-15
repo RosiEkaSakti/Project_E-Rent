@@ -1,9 +1,10 @@
 <html>
-<head><title></title></head>    
+<head><title></title>
+</head>    
 <body>
 <!-- include sidebar -->
 <div class="wrapper">
-   <?php $this->load->view($sidebar) ?>    
+   <?php $this->load->view('v_sidebar') ?>   
 </div>
 <!-- penutup include sidebar -->
 <!-- awal isi -->
@@ -32,8 +33,9 @@
 				</div>
 			</div>
             <div class="panel panel-primary">
+               
                         <div class="panel-heading">
-						<button data-toggle="modal" data-target="#myModal" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Admin</button></div>
+						<button href="<?php echo site_url('admin/v_admin/add') ?>"data-toggle="modal" data-target="#myModal" class="btn btn-success btn-sm"><span class="fas fa-plus"></span> Tambah Data Admin</button></div>
                         <div class="panel-body">
 							<div class="col-lg-8">
 								<!--muncul jika ada pencarian (tombol reset pencarian)-->
@@ -61,6 +63,28 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php 
+                                        $no =1;
+                                        foreach ($data as $v_admin): ?>
+                                    <tr>
+                                        <td width="150">
+                                            <?php echo $no; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $v_admin->username?>
+                                        </td>
+                                        <td class="small">
+                                            <?php echo $v_admin->password?></td>
+                                        <td width="250">
+                                            <a href="<?php echo site_url('admin/c_admin/edit/'.$v_admin->id_user) ?>"
+                                             class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+                                            <a onclick="deleteConfirm('<?php echo site_url('admin/c_admin/delete/'.$v_admin->id_user) ?>')"
+                                             href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+                                        </td>
+                                    </tr>
+                                      <?php 
+                                        $no++;
+                                    endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
