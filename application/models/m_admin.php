@@ -2,7 +2,7 @@
 
 class m_admin extends CI_Model
 {
-    private $_table = "admin";
+    private $_table = "tb_user";
 
     public $id_user;
     public $username;
@@ -25,6 +25,16 @@ class m_admin extends CI_Model
         ];
     }
 
+    public function edit_rules()
+    {
+        return [
+           ['field' => 'username',
+            'label' => 'username',
+            'rules' => 'required'
+           ], 
+        ];
+    }
+
     public function getAll()
     {
         return $this->db->get($this->_table)->result();
@@ -40,17 +50,15 @@ class m_admin extends CI_Model
         $post = $this->input->post();
         $this->id_user = uniqid();
         $this->username = $post["username"];
-        $this->password = $post["password"];
+        $this->password = md5($post["password"]);
         $this->db->insert($this->_table, $this);
     }
 
-    public function update()
+    public function update($user)
     {
         $post = $this->input->post();
         $this->id_user = $post["id"];
-        $this->username = $post["username"];
-        $this->password = $post["password"];
-        $this->db->update($this->_table, $this, array('id_user' => $post['id']));
+        $this->db->update($this->_table, $user, array('id_user' => $post['id']));
     }
 
     public function delete($id)

@@ -1,114 +1,74 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title>Edit User</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../assets/dist/css/template.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-</head>
-
+<html>
+<head><title></title></head>    
 <body>
+<!-- include sidebar -->
+<div class="wrapper">
+   <?php $this->load->view($sidebar) ?>    
+</div>
+<!-- penutup include sidebar -->
+<!-- awal isi -->
 
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <?php 
-			include '../sidebar.php' ;
-		?>
-
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">User</h1>
-					<ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-arrow-circle-o-right"></i><a href="index.php"> Admin </a>
-                            </li>
-							<li class="active">
-                                <i class="fa fa-edit"></i> Edit Admin
-                            </li>
-                    </ol>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-				<div class="col-md-12">
-					<div class="alert alert-warning alert-dismissable">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <i class="fa fa-warning"></i> Untuk PASSWORD jika tidak ingin diubah masukan 'Password Lama atau Batal' dan jika ingin diubah masukan 'Password Baru'  <br>
-					</div>
-					<div class="panel panel-primary">
-                        <div class="panel-heading"><i class="fa fa-user"></i>   Edit User
-						</div>
-                        <div class="panel-body">
-							<form action="update.php" method="post">
-								<table class="table">
-									<tr>
-										<td></td>
-										<td><input type="hidden" name="id_user" value="<?php echo $d['id_user'] ?>"></td>
-									</tr>
-									<tr>
-										<td>Username</td>
-										<td><input type="text" class="form-control" name="username" value="<?php echo $d['username'] ?>"></td>
-									</tr>
-									<tr>
-										<td>Password</td>
-										<td><input type="text" class="form-control" name="password" required></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>
-										<input type="submit" class="btn btn-info" value="Simpan">
-										<a href="index.php" class="btn btn-danger">Batal</a>
-										</td>
-									</tr>
-								</table>
-							</form>
-							<?php 
-								}
-							?>
-                        </div>
-                    </div>
-				</div>
-            </div>
-            <!-- /.row -->
-            </div>
-        <!-- /#page-wrapper -->
-
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Admin</h1>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-arrow-circle-o-right"></i>Edit Admin E-RENT
+                </li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
     </div>
-    <!-- /#wrapper -->
-	
-    <!-- jQuery -->
-    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <!-- /.row -->
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-info alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        1. Icon <i class="fa fa-plus-circle"></i> berfungsi sebagai menambah data user <br>
+                        2. Icon <i class="fa fa-edit"></i> berfungsi untuk mengedit data user yang dipilih <br>
+                        2. Icon <i class="fa fa-trash"></i> berfungsi untuk menghapus data user yang dipilih
+                    </div>
+                </div>
+            </div> -->
+        <!-- </div> -->
+        <div class="container-fluid">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+                <?php if ($this->session->flashdata('success')): ?>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $this->session->flashdata('success'); ?>
+                </div>
+                <?php endif; ?>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <a href="<?php echo site_url('admin/c_admin/') ?>"> <button class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back</button> </a>
+                    </div>
+                    <div class="card-body">
 
-    <!-- Custom Theme JavaScript -->
-    <script src="../assets/dist/js/template.js"></script>
-	
-	<!-- Metis Menu Plugin JavaScript -->
-    <script src="../assets/vendor/metisMenu/metisMenu.min.js"></script>
-	
-	<script type="text/javascript">
-    $(document).ready(function() {
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-            $("#wrapper.toggled").find("#sidebar-wrapper").find(".collapse").collapse("hide");
-        });
-    });
-    </script>
+                        <form action="<?php base_url('admin/c_admin/edit') ?>" method="post" enctype="multipart/form-data" >
+                            <input type="hidden" name="id" value="<?= $v_admin->id_user ?>">
+                            <div class="form-group">
+                                <label for="name">Username*</label>
+                                <input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"
+                                 type="text" name="username" placeholder="username" value="<?= $v_admin->username ?>" />
+                                <div class="invalid-feedback">
+                                    <?php echo form_error('username') ?>
+                                </div>
+                            </div>
+                            <input class="btn btn-success" type="submit" name="btn" value="Save" />
+                        </form>
 
+                    </div>
+
+                    <div class="card-footer small text-muted">
+                        * required fields
+                    </div>
+
+
+                </div>
+                <!-- /.container-fluid -->                  
+    </div>
+</div>
+<!-- akhir isi -->
 </body>
-
 </html>

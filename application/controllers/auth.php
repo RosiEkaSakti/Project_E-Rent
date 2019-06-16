@@ -4,7 +4,7 @@ class auth extends CI_Controller {
     public function index($error = NULL) {
         $data = array(
             'title' => 'login Page',
-            'action' => site_url('auth/home'),
+            'action' => site_url('auth/login'),
             'error' => $error
         );
         $this->load->view('login', $data);
@@ -22,7 +22,7 @@ class auth extends CI_Controller {
             );
             $this->session->set_userdata($data);
 //            redirect ke halaman sukses
-            redirect(site_url('tb_user'));
+            redirect(site_url('c_home'));
 
         } else {
 //            tampilkan pesan error
@@ -34,7 +34,7 @@ class auth extends CI_Controller {
 //        destroy session
         $this->session->sess_destroy();
 //        redirect ke halaman login
-        redirect(site_url('auth.php'));
+        redirect(site_url('auth'));
     }
 }
 /* End of file auth.php */

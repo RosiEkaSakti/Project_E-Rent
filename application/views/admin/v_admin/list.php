@@ -35,7 +35,10 @@
             <div class="panel panel-primary">
                
                         <div class="panel-heading">
-						<button href="<?php echo base_url().'admin/v_admin/new_form'?> "data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fas fa-plus"></span> Tambah Data Admin</button></div>
+						  <a href="<?php echo base_url().'admin/c_admin/add'?> ">
+                            <button data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Admin</button>
+                          </a>
+                        </div>
                         <div class="panel-body">
 							<div class="col-lg-8">
 								<!--muncul jika ada pencarian (tombol reset pencarian)-->
@@ -78,9 +81,9 @@
                                             <?php echo $v_admin->password?></td>
                                         <td width="250">
                                             <a href="<?php echo site_url('admin/c_admin/edit/'.$v_admin->id_user) ?>"
-                                             class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+                                             class="btn btn-small"><i class="fa fa-edit"></i> Edit</a>
                                             <a onclick="deleteConfirm('<?php echo site_url('admin/c_admin/delete/'.$v_admin->id_user) ?>')"
-                                             href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+                                             href="#!" class="btn btn-small text-danger"><i class="fa fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                       <?php 

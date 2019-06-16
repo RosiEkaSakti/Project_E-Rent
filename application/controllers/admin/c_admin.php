@@ -13,6 +13,7 @@ class c_admin extends CI_Controller {
         //memanggil file view
 
         $data = array (
+             'sidebar' => 'v_sidebar',
             'data' => $this->m_admin->get_view());
 
         $this->load->view('admin/v_admin/list',$data); 
@@ -28,24 +29,28 @@ class c_admin extends CI_Controller {
             $v_admin->save(); // simpan dat ke database
             $this->session->set_flashdata('success', 'Berhasil disimpan'); // tampilkan pesan berhasil
         }
-
-        $this->load->view("admin/new_form"); //tampilkan form add
+        $data = array (
+             'sidebar' => 'v_sidebar',
+            );
+        $this->load->view("admin/new_form", $data); //tampilkan form add
     }
 
     public function edit($id = null)
     {
         if (!isset($id)) redirect('admin/v_admin');
        
-        $v_admin = $this->m_model; //objek model
+        $v_admin = $this->m_admin; //objek model
         $validation = $this->form_validation; //objrk validation
-       $validation->set_rules($v_admin->rules()); //menerapkan rules
+        $validation->set_rules($v_admin->edit_rules()); //menerapkan rules
 
         if ($validation->run()) { // melakukan validasi
-            $v_admin->update(); // menyimpan data
+            $user = array('username' => $this->input->post('username'));
+            $v_admin->update($user); // menyimpan data
             $this->session->set_flashdata('success', 'Berhasil disimpan'); 
         }
 
-        $data["v_admin"] = $product->getById($id); // mengambil data untuk ditampilkan pada form
+        $data["v_admin"] = $v_admin->getById($id); // mengambil data untuk ditampilkan pada form
+        $data['sidebar'] = 'v_sidebar';
         if (!$data["v_admin"]) show_404(); //jika tidak ada data, tampilkan error 404
         
         $this->load->view("admin/v_admin/edit_form", $data);

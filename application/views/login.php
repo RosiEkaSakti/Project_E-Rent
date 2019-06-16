@@ -32,12 +32,12 @@
 						<img src="assets/gambar/LOGO E-RENT FIX.jpg" class="img-responsive"/>
 						<center>
 						<br>
-                        <form method="post" action="c_home"  role="form">
+                        <form method="post" action="<?= base_url().'auth/login'?>"  role="form">
 						<?php 
-						if(isset($_GET['pesan'])){
-							if($_GET['pesan'] == "gagal"){
+						if(isset($error)){
+							
 								echo "<div style='margin-bottom:5px' class='alert alert-danger alert-dismissable' role='alert'><span class='glyphicon glyphicon-warning-sign'></span><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>  Username dan Password Salah !!</div>";
-							}
+							
 						}
 						?>
                             <fieldset>
