@@ -76,7 +76,7 @@
                                         foreach ($data as $v_mobil): ?>
                                     <tr>
                                         <td width="150">
-                                            <?php echo $no; ?>
+                                            <?php echo $v_mobil->id_mobil?>
                                         </td>
                                         <td>
                                             <img src="<?php echo base_url('upload/v_mobil/'.$v_mobil->foto_mobil) ?>" width="64" />

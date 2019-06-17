@@ -40,10 +40,6 @@ class m_mobil extends CI_Model
             'label' => 'label',
             'rules' => 'required'],
 
-             ['field' => 'warna',
-            'label' => 'colour',
-            'rules' => 'required'],
-
              ['field' => 'harga',
             'label' => 'no',
             'rules' => 'required'],
@@ -81,10 +77,6 @@ class m_mobil extends CI_Model
             'label' => 'label',
             'rules' => 'required'],
 
-             ['field' => 'warna',
-            'label' => 'colour',
-            'rules' => 'required'],
-
              ['field' => 'harga',
             'label' => 'no',
             'rules' => 'required'],
@@ -108,14 +100,14 @@ class m_mobil extends CI_Model
     public function save()
     {
         $post = $this->input->post();
-        $this->id_mobil = $post["id_mobil"];
-        $this->foto_mobil = $post["foto_mobil"];
-        $this->id_jenis = $post["id_jenis"];
-        $this->type_mobil = $post["type_mobil"];
-        $this->merk = $post["merk"];
-        $this->no_polisi = $post["no_polisi"];
-        $this->harga = $post["harga"];
-        $this->status = $post["status"];
+        $this->id_mobil = $post["No"];
+        $this->foto_mobil = $post["image"];
+        $this->id_jenis = $post["no"];
+        $this->type_mobil = $post["label"];
+        $this->merk = $post["label"];
+        $this->no_polisi = $post["label"];
+        $this->harga = $post["no"];
+        $this->status = $post["label"];
         $this->db->insert($this->_table, $this);
     }
 
@@ -123,12 +115,12 @@ class m_mobil extends CI_Model
     {
         $post = $this->input->post();
         $this->id_mobil = $post["id_mobil"];
-        $this->db->update($this->tb_mobil, $user, array("id_mobil" => $post['id_mobil']));
+        $this->db->update($this->_table, $user, array("id_mobil" => $id['id_mobil']));
     }
 
     public function delete($id)
     {
-        return $this->db->delete($this->tb_mobil, array("id_mobil" => $id));
+        return $this->db->delete($this->_table, array("id_mobil" => $id['id_mobil']));
     }
 
     public function get_view(){

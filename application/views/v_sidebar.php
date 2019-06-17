@@ -55,6 +55,9 @@
                 <li>
                     <a href="<?php echo base_url().'restore/c_restore'?>"><i class="fa fa-user fa-fw"></i><span class="masked"> Restore </span></a>
                 </li>
+                <li>
+                     <a class="btn btn-default btn-outline" href="<?php echo base_url().'auth'?>"> LOGOUT </span></a>
+                </li>
             </ul>
         </div>
     </div>
