@@ -3,12 +3,14 @@
 class m_mobil extends CI_Model
 {
     private $_table = "tb_mobil";
+
     public $id_mobil;
     public $foto_mobil;
     public $id_jenis;
     public $type_mobil;
     public $merk;
     public $no_polisi;
+    public $warna;
     public $harga;
     public $status;  
 
@@ -89,34 +91,16 @@ class m_mobil extends CI_Model
     public function save()
     {
         $post = $this->input->post();
-<<<<<<< HEAD
 
         // $this->id_mobil = $post["No"];
         $this->foto_mobil = '';
-=======
-        $this->id_mobil = $post["id_mobil"];
-        $this->foto_mobil = $post["foto_mobil"];
-<<<<<<< HEAD
-        $this->type_mobil = ($post["type_mobil"]);
-        $this->id_jenis = ($post["id_jenis"]);
-        $this->merk = ($post["merk"]);
-        $this->no_polisi = ($post["no_polisi"]);
-        $this->warna = ($post["warna"]);
-        $this->harga = ($post["harga"]);
-        $this->status = ($post["status"]);
-=======
->>>>>>> 503e4e41d93b8bbf03ed07dcf1a6e2cdecbd347c
         $this->id_jenis = $post["id_jenis"];
         $this->type_mobil = $post["type_mobil"];
         $this->merk = $post["merk"];
         $this->no_polisi = $post["no_polisi"];
         $this->harga = $post["harga"];
         $this->status = $post["status"];
-<<<<<<< HEAD
         $this->warna = $post["warna"];
-=======
->>>>>>> 4c0afe99945d19951cf85118a0aaaca8ddc64c70
->>>>>>> 503e4e41d93b8bbf03ed07dcf1a6e2cdecbd347c
         $this->db->insert($this->_table, $this);
     }
 
