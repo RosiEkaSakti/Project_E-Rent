@@ -89,6 +89,15 @@
 							</div>
 
 							<div class="form-group">
+								<label for="name">Harga*</label>
+								<input class="form-control <?php echo form_error('harga') ? 'is-invalid':'' ?>"
+								 type="text" name="harga" placeholder="harga" />
+								<div class="invalid-feedback">
+									<?php echo form_error('harga') ?>
+								</div>
+							</div>
+
+							<div class="form-group">
 								<label for="name">Status*</label>
 								<input class="form-control <?php echo form_error('status') ? 'is-invalid':'' ?>"
 								 type="text" name="status" placeholder="status" />

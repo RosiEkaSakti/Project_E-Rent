@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<title>Tambah data Mobil</title>
+	<title>Tambah data Pelanggan</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 				<?php endif; ?>
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('mobil/c_mobil/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
+						<a href="<?php echo site_url('pelanggan/c_pelanggan/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
 					</div>
 					<div class="card-body">
 

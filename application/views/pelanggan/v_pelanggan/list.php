@@ -35,7 +35,7 @@
                
                         <div class="panel-heading">
                           <a href="<?php echo base_url().'pelanggan/c_pelanggan/add'?> ">
-                            <button data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Mobil</button>
+                            <button data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Pelanggan</button>
                           </a>
                         </div>
                         <div class="panel-body">

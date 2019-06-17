@@ -65,6 +65,16 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="name">Id Jenis</label>
+                                <input class="form-control <?php echo form_error('id_jenis') ? 'is-invalid':'' ?>"
+                                 type="file" name="id_jenis" min="0" placeholder="id_jenis" value="<?= $v_mobil->id_jenis ?>" />
+                                <div class="invalid-feedback">
+                                    <?php echo form_error('id_jenis') ?>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
                                 <label for="name">Type Mobil*</label>
                                 <input class="form-control <?php echo form_error('type_mobil') ? 'is-invalid':'' ?>"
                                  type="tetxt" name="type_mobil" placeholder="type_mobil" value="<?= $v_mobil->type_mobil ?>" />
@@ -90,6 +100,16 @@
                                     <?php echo form_error('no_polisi') ?>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <label for="name">Harga</label>
+                                <input class="form-control <?php echo form_error('harga') ? 'is-invalid':'' ?>"
+                                 type="file" name="harga" min="0" placeholder="harga" value="<?= $v_mobil->harga ?>" />
+                                <div class="invalid-feedback">
+                                    <?php echo form_error('harga') ?>
+                                </div>
+                            </div>
+
 
                             <div class="form-group">
                                 <label for="name">Status*</label>
