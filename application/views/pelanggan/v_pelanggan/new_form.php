@@ -38,7 +38,7 @@
                             <div class="form-group">
                                 <label for="name">No*</label>
                                 <input class="form-control <?php echo form_error('id_pelanggan') ? 'is-invalid':'' ?>"
-                                 type="number" name="id_pelanggan" placeholder="id_pelanggan" value="<?= $v_pelanggan->id_pelanggan ?>" />
+                                 type="number" name="id_pelanggan" placeholder="id_pelanggan" value="<?= $v_pelanggan->id_pelanggan ?>">
                                 <div class="invalid-feedback">
                                     <?php echo form_error('id_pelanggan') ?>
                                 </div>
@@ -173,5 +173,3 @@
 </body>
 
 </html>
-=======
->>>>>>> b2d091a0cbd1b97a7765c87197b3662f6a38ee91

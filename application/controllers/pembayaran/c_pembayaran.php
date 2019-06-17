@@ -2,22 +2,21 @@
 
 class c_pembayaran extends CI_Controller {
 
-	public function index(){
-        //memanggil file view
-        $data=array (
-            'sidebar' => 'v_sidebar'
-        );
-        $this->load->view('pembayaran/v_pembayaran',$data);   
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model("m_pembayaran");
+        $this->load->library('form_validation');
     }
 
-    public function index(){
+	public function index(){
         //memanggil file view
 
-        $data = array (
-             'sidebar' => 'v_sidebar',
-            'data' => $this->m_pembayaran->get_view());
-
-        $this->load->view('pembayaran/v_pembayaran/list',$data); 
+     $data = array (
+        'sidebar' => 'v_sidebar',
+    'data' => $this->m_pembayaran->get_view());
+    
+        $this->load->view('pembayaran/v_pembayaran/list',$data);   
     }
 
      public function add()

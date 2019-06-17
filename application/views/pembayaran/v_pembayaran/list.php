@@ -11,10 +11,10 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-        <h1 class="page-header">Transaksi Biaya E-RENT</h1>
+        <h1 class="page-header">Pembayaran E-RENT</h1>
 			<ol class="breadcrumb">
                 <li class="active">
-                    <i class="fa fa-arrow-circle-o-right"></i> Transaksi Biaya E-RENT
+                    <i class="fa fa-arrow-circle-o-right"></i> Pembayaran E-RENT
                 </li>
             </ol>
         </div>
@@ -59,63 +59,47 @@
                                 <table class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th style="width:5px"><center>Id Transaksi</center></th>
-                                            <th style="width:200px"><center>Id Mobil</center></th>
-                                            <th style="width:200px"><center>Harga<center></th>
-                                            <th style="width:200px"><center>Id Pelanggan<center></th>
-                                            <th style="width:200px"><center>Nama Lengkap<center></th>
-                                            <th style="width:200px"><center>Tanggal Sewa<center></th>    
-                                            <th style="width:200px"><center>Tanggal Selesai Sewa<center></th>  
-                                            <th style="width:200px"><center>Jumlah Harga<center></th>   
-                                            <th style="width:200px"><center>Denda<center></th>   
-                                            <th style="width:200px"><center>Status Pembayaran<center></th>   
-                                            <th style="width:200px"><center>Status Pengembalian<center></th>              
+                                            <th style="width:5px"><center>id_bayar</center></th>
+                                            <th style="width:200px"><center>id_transaksi</center></th>
+                                            <th style="width:200px"><center>tgl_bayar<center></th>
+                                            <th style="width:200px"><center>pembayaran<center></th>
+                                            <th style="width:200px"><center>no_rek<center></th>
+                                            <th style="width:200px"><center>nama_bank<center></th>    
+                                            <th style="width:200px"><center>atas_nama<center></th>  
                                             <th style="width:30px"><center>Opsi</center></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php 
                                         $no =1;
-                                        foreach ($data as $v_tranksaksi_biaya): ?>
+                                        foreach ($data as $v_pembayaran): ?>
                                     <tr>
                                         <td width="150">
-                                            <?php echo $v_tranksaksi_biaya->id_transaksi?>
+                                            <?php echo $v_pembayaran->id_bayar?>
                                         </td>
                                         <td>
-                                            <?php echo $v_tranksaksi_biaya->id_mobil?>
+                                            <?php echo $v_pembayaran->id_transaksi?>
                                         </td>
                                         <td>
-                                            <?php echo $v_tranksaksi_biaya->harga?>
+                                            <?php echo $v_pembayaran->tgl_bayar?>
                                         </td>
                                         <td>
-                                            <?php echo $v_tranksaksi_biaya->id_pelanggan?>
+                                            <?php echo $v_pembayaran->pembayaran?>
                                         </td>
                                         <td>
-                                            <?php echo $v_tranksaksi_biaya->nama_lengkap?>
+                                            <?php echo $v_pembayaran->no_rek?>
                                         </td>
                                         <td>
-                                            <?php echo $v_tranksaksi_biaya->tgl_sewa?>
+                                            <?php echo $v_pembayaran->nama_bank?>
                                         </td>
                                         <td>
-                                            <?php echo $v_tranksaksi_biaya->tgl_selesaisewa?>
-                                        </td>
-                                        <td>
-                                            <?php echo $v_tranksaksi_biaya->jumlah_harga?>
-                                        </td>
-                                        <td>
-                                            <?php echo $v_tranksaksi_biaya->denda?>
-                                        </td>
-                                        <td>
-                                            <?php echo $v_tranksaksi_biaya->status_pembayaran?>
-                                        </td>
-                                         <td>
-                                            <?php echo $v_tranksaksi_biaya->status_pengembalian?>
-                                        </td>
+                                            <?php echo $v_pembayaran->atas_nama?>
+                                        
                                        
                                         <td width="250">
-                                            <a href="<?php echo site_url('transaksi/c_transaski/edit/'.$v_tranksaksi_biaya->id_transaksi) ?>"
+                                            <a href="<?php echo site_url('pembayaran/c_pembayaran/edit/'.$v_pembayaran->id_pembayaran) ?>"
                                              class="btn btn-small"><i class="fa fa-edit"></i> Edit</a>
-                                            <a onclick="deleteConfirm('<?php echo site_url('transaksi/c_transaski/delete/'.$v_tranksaksi_biaya->id_transaksi) ?>')"
+                                            <a onclick="deleteConfirm('<?php echo site_url('pembayaran/c_pembayaran/delete/'.$v_v_pembayaran->id_pembayran) ?>')"
                                              href="#!" class="btn btn-small text-danger"><i class="fa fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>

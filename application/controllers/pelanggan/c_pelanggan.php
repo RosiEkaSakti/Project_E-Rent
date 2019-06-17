@@ -32,7 +32,7 @@ class c_pelanggan extends CI_Controller {
         $data = array (
              'sidebar' => 'v_sidebar',
             );
-        $this->load->view("pelanggan/new_form", $data); //tampilkan form add
+        $this->load->view("pelanggan/v_pelanggan/new_form", $data); //tampilkan form add
     }
 
     public function edit($id = null)

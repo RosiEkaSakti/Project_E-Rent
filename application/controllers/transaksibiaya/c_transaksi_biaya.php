@@ -2,22 +2,22 @@
 
 class c_transaksi_biaya extends CI_Controller {
 
-	public function index(){
-        //memanggil file view
-        $data=array (
-            'sidebar' => 'v_sidebar'
-        );
-        $this->load->view('transaksibiaya/v_transaksi_biaya',$data);   
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model("m_transaksibiaya");
+        $this->load->library('form_validation');
     }
+
 
 public function index(){
         //memanggil file view
 
-        $data = array (
-            'sidebar' => 'v_sidebar',
-            'data' => $this->m_transaksibiaya->get_view());
+     $data = array (
+        'sidebar' => 'v_sidebar',
+    'data' => $this->m_transaksibiaya->get_view());
     
-        $this->load->view('transaksibiaya/v_transaksi_biaya/list',$data);   
+        $this->load->view('transaksibiaya/v_tranksaksi_biaya/list',$data);   
     }
 
      public function add()
@@ -33,7 +33,7 @@ public function index(){
         $data = array (
              'sidebar' => 'v_sidebar',
             );
-        $this->load->view("transaksibiaya/new_form", $data); //tampilkan form add
+        $this->load->view("transaksibiaya/v_tranksaksi_biaya/new_form", $data); //tampilkan form add
     }
 
     public function edit($id = null)
