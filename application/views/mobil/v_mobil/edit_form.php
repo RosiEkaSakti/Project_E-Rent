@@ -46,14 +46,7 @@
                     <div class="card-body">
 
                        <form action="<?php base_url('mobil/c_mobil/add') ?>" method="post" enctype="multipart/form-data" >
-                            <div class="form-group">
-                                <label for="name">No*</label>
-                                <input class="form-control <?php echo form_error('id_mobil') ? 'is-invalid':'' ?>"
-                                 type="number" name="id_mobil" placeholder="id_mobil" value="<?= $v_mobil->id_mobil ?>" />
-                                <div class="invalid-feedback">
-                                    <?php echo form_error('id_mobil') ?>
-                                </div>
-                            </div>
+                            <input type="hidden" name="id_mobil" value="<?=$v_mobil->id_mobil?>">
 
                             <div class="form-group">
                                 <label for="name">Foto Mobil</label>
@@ -65,14 +58,21 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="name">Id Jenis</label>
-                                <input class="form-control <?php echo form_error('id_jenis') ? 'is-invalid':'' ?>"
-                                 type="file" name="id_jenis" min="0" placeholder="id_jenis" value="<?= $v_mobil->id_jenis ?>" />
+                                <label for="name">Jenis*</label>
+                                <select name="id_jenis" class="form-control">
+                                    <option value="">--Pilih Jenis--</option>
+                                    <?php
+                                    foreach ($jenis as $key => $value) {
+                                    ?>
+                                    <option value="<?=$value['id_jenis']?>" <?= $value['id_jenis'] == $v_mobil->id_jenis ? 'selected' : '' ?> ><?=$value['nama_jenis']?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
                                 <div class="invalid-feedback">
                                     <?php echo form_error('id_jenis') ?>
                                 </div>
                             </div>
-
 
                             <div class="form-group">
                                 <label for="name">Type Mobil*</label>
@@ -102,11 +102,20 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="name">Harga</label>
+                                <label for="">Harga*</label>
                                 <input class="form-control <?php echo form_error('harga') ? 'is-invalid':'' ?>"
-                                 type="file" name="harga" min="0" placeholder="harga" value="<?= $v_mobil->harga ?>" />
+                                 type="text" name="harga" placeholder="harga" value="<?= $v_mobil->harga ?>" />
                                 <div class="invalid-feedback">
                                     <?php echo form_error('harga') ?>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Warna*</label>
+                                <input class="form-control <?php echo form_error('warna') ? 'is-invalid':'' ?>"
+                                 type="text" name="warna" placeholder="warna" value="<?= $v_mobil->warna ?>" />
+                                <div class="invalid-feedback">
+                                    <?php echo form_error('warna') ?>
                                 </div>
                             </div>
 

@@ -18,13 +18,9 @@ class m_mobil extends CI_Model
     public function rules()
     {
         return [
-            ['field' => 'id_mobil',
-            'label' => 'No',
-            'rules' => 'numeric'],
-
-            ['field' => 'foto_mobil',
-            'label' => 'image',
-            'rules' => 'required'],
+            // ['field' => 'foto_mobil',
+            // 'label' => 'image',
+            // 'rules' => 'required'],
             
             ['field' => 'id_jenis',
             'label' => 'no',
@@ -55,17 +51,10 @@ class m_mobil extends CI_Model
     public function edit_rules()
     {
         return [
-           ['field' => 'id_mobil',
-            'label' => 'No',
-            'rules' => 'numeric'],
-
-            ['field' => 'foto_mobil',
-            'label' => 'image',
-            'rules' => 'required'],
             
-            ['field' => 'id_jenis',
-            'label' => 'no',
-            'rules' => 'required'],
+            // ['field' => 'id_jenis',
+            // 'label' => 'no',
+            // 'rules' => 'required'],
 
              ['field' => 'type_mobil',
             'label' => 'label',
@@ -102,53 +91,54 @@ class m_mobil extends CI_Model
     public function save()
     {
         $post = $this->input->post();
-<<<<<<< HEAD
-        $this->id_mobil = $post["No"];
-        $this->foto_mobil = $post["image"];
-        $this->id_jenis = $post["no"];
-        $this->type_mobil = $post["label"];
-        $this->merk = $post["label"];
-        $this->no_polisi = $post["label"];
-        $this->harga = $post["no"];
-        $this->status = $post["label"];
-=======
-        $this->id_mobil = $post["id_mobil"];
-        $this->foto_mobil = $post["foto_mobil"];
-        $this->type_mobil = ($post["type_mobil"]);
-        $this->id_jenis = ($post["id_jenis"]);
-        $this->merk = ($post["merk"]);
-        $this->no_polisi = ($post["no_polisi"]);
-        $this->warna = ($post["warna"]);
-        $this->harga = ($post["harga"]);
-        $this->status = ($post["status"]);
->>>>>>> 5963590502f696ee1e041e01da669fbe18609053
+
+        // $this->id_mobil = $post["No"];
+        $this->foto_mobil = '';
+        $this->id_jenis = $post["id_jenis"];
+        $this->type_mobil = $post["type_mobil"];
+        $this->merk = $post["merk"];
+        $this->no_polisi = $post["no_polisi"];
+        $this->harga = $post["harga"];
+        $this->status = $post["status"];
+        $this->warna = $post["warna"];
         $this->db->insert($this->_table, $this);
     }
 
-    public function update($user)
+    public function update()
     {
         $post = $this->input->post();
-<<<<<<< HEAD
+
         $this->id_mobil = $post["id_mobil"];
-        $this->db->update($this->_table, $user, array("id_mobil" => $id['id_mobil']));
-=======
-        $this->id_mobil = $post["id"];
-        $this->db->update($this->_table, $user, array("id_mobil" => $post['id']));
->>>>>>> 5963590502f696ee1e041e01da669fbe18609053
+        $this->foto_mobil = '';
+        $this->id_jenis = $post["id_jenis"];
+        $this->type_mobil = $post["type_mobil"];
+        $this->merk = $post["merk"];
+        $this->no_polisi = $post["no_polisi"];
+        $this->harga = $post["harga"];
+        $this->status = $post["status"];
+        $this->warna = $post["warna"];
+        $this->db->update($this->_table, $this, ['id_mobil' => $post['id_mobil']]);
+        // $this->id_mobil = $post["id"];
+        // $this->db->update($this->_table, $user, array("id_mobil" => $post['id']));
     }
+
+    
 
     public function delete($id)
     {
-<<<<<<< HEAD
-        return $this->db->delete($this->_table, array("id_mobil" => $id['id_mobil']));
-=======
-        return $this->db->delete($this->_table, array("id_mobil" => $id));
->>>>>>> 5963590502f696ee1e041e01da669fbe18609053
+        $this->db->delete($this->_table, ['id_mobil' => $id]);
+        // return $this->db->delete($this->_table, array("id_mobil" => $id));
     }
 
     public function get_view(){
-        $query = $this->db->query("SELECT * FROM tb_mobil");
+        $query = $this->db->query("SELECT m.*, j.nama_jenis FROM tb_mobil m JOIN tb_jenis j ON j.id_jenis = m.id_jenis");
         return $query->result();
+    }
+
+    public function getJenis()
+    {
+        $jenis = $this->db->get('tb_jenis')->result_array();
+        return $jenis;
     }
 }
 ?>

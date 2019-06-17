@@ -11,10 +11,10 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-        	<h1 class="page-header">Admin</h1>
+        	<h1 class="page-header">Mobil</h1>
 			<ol class="breadcrumb">
                 <li class="active">
-                    <i class="fa fa-arrow-circle-o-right"></i> Admin E-RENT
+                    <i class="fa fa-arrow-circle-o-right"></i> Tambah Mobil
                 </li>
             </ol>
         </div>
@@ -46,14 +46,6 @@
 					<div class="card-body">
 
 						<form action="<?php base_url('mobil/c_mobil/add') ?>" method="post" enctype="multipart/form-data" >
-							<div class="form-group">
-								<label for="name">No*</label>
-								<input class="form-control <?php echo form_error('id_mobil') ? 'is-invalid':'' ?>"
-								 type="number" name="id_mobil" placeholder="id_mobil" />
-								<div class="invalid-feedback">
-									<?php echo form_error('id_mobil') ?>
-								</div>
-							</div>
 
 							<div class="form-group">
 								<label for="name">Foto Mobil</label>
@@ -73,10 +65,18 @@
 								</div>
 							</div>
 
-								<div class="form-group">
-								<label for="name">Id Jenis*</label>
-								<input class="form-control <?php echo form_error('id_jenis') ? 'is-invalid':'' ?>"
-								 type="tetxt" name="id_jenis" placeholder="id_jenis" />
+							<div class="form-group">
+								<label for="name">Jenis*</label>
+								<select name="id_jenis" class="form-control">
+									<option value="">--Pilih Jenis--</option>
+									<?php
+									foreach ($jenis as $key => $value) {
+									?>
+									<option value="<?=$value['id_jenis']?>"><?=$value['nama_jenis']?></option>
+									<?php
+									}
+									?>
+								</select>
 								<div class="invalid-feedback">
 									<?php echo form_error('id_jenis') ?>
 								</div>
@@ -84,10 +84,10 @@
 
 							<div class="form-group">
 								<label for="name">Merk Mobil*</label>
-								<input class="form-control <?php echo form_error('merk_mobil') ? 'is-invalid':'' ?>"
-								 type="text" name="merk_mobil" placeholder="merk_mobil" />
+								<input class="form-control <?php echo form_error('merk') ? 'is-invalid':'' ?>"
+								 type="text" name="merk" placeholder="merk_mobil" />
 								<div class="invalid-feedback">
-									<?php echo form_error('merk_mobil') ?>
+									<?php echo form_error('merk') ?>
 								</div>
 							</div>
 
@@ -110,6 +110,15 @@
 							</div>
 
 							<div class="form-group">
+								<label for="name">Warna*</label>
+								<input class="form-control <?php echo form_error('warna') ? 'is-invalid':'' ?>"
+								 type="text" name="warna" placeholder="warna" />
+								<div class="invalid-feedback">
+									<?php echo form_error('warna') ?>
+								</div>
+							</div>
+
+							<div class="form-group">
 								<label for="name">Status*</label>
 								<input class="form-control <?php echo form_error('status') ? 'is-invalid':'' ?>"
 								 type="text" name="status" placeholder="status" />
@@ -117,6 +126,8 @@
 									<?php echo form_error('status') ?>
 								</div>
 							</div>
+
+
 
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>

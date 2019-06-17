@@ -21,6 +21,7 @@ class c_mobil extends CI_Controller {
 
     public function add()
     {
+
         $v_mobil = $this->m_mobil; //objek model
         $validation = $this->form_validation; //objek form validasi // ini untuk membuat objek model dan form validation untuk memudahkan saja
         $validation->set_rules($v_mobil->rules()); // terapkan rules
@@ -31,7 +32,9 @@ class c_mobil extends CI_Controller {
         }
         $data = array (
              'sidebar' => 'v_sidebar',
+             'jenis' => $v_mobil->getJenis()
             );
+        // $data['jenis'] = $v_mobil->getJenis();
         $this->load->view("mobil/new_form", $data); //tampilkan form add
     }
 
@@ -44,13 +47,14 @@ class c_mobil extends CI_Controller {
         $validation->set_rules($v_mobil->edit_rules()); //menerapkan rules
 
         if ($validation->run()) { // melakukan validasi
-            $id = array('id_mobil' => $this->input->post('id_mobil'));
-            $v_mobil->update($mobil); // menyimpan data
+            // $id = array('id_mobil' => $this->input->post('id_mobil'));
+            $v_mobil->update(); // menyimpan data
             $this->session->set_flashdata('success', 'Berhasil disimpan'); 
         }
 
         $data["v_mobil"] = $v_mobil->getById($id); // mengambil data untuk ditampilkan pada form
         $data['sidebar'] = 'v_sidebar';
+        $data['jenis'] = $v_mobil->getJenis();
         if (!$data["v_mobil"]) show_404(); //jika tidak ada data, tampilkan error 404
         
         $this->load->view("mobil/v_mobil/edit_form", $data);
@@ -60,9 +64,10 @@ class c_mobil extends CI_Controller {
     {
         if (!isset($id)) show_404();
         
-        if ($this->m_model->delete($id)) {
-            redirect(site_url('mobil/v_mobil'));
+        if ($this->m_mobil->delete($id)) {
+            
         }  
+        redirect(site_url().'mobil/c_mobil');
     }
 }
 

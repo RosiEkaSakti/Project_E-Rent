@@ -61,7 +61,7 @@
                                         <tr>
                                             <th style="width:5px"><center>No</center></th>
                                             <th style="width:200px"><center>Foto Mobil</center></th>
-                                            <th style="width:200px"><center>Id Jenis<center></th>
+                                            <th style="width:200px"><center>Jenis<center></th>
                                             <th style="width:200px"><center>Type Mobil<center></th>
                                             <th style="width:200px"><center>Merk Mobil<center></th>
                                             <th style="width:200px"><center>No Polisi<center></th>
@@ -76,13 +76,13 @@
                                         foreach ($data as $v_mobil): ?>
                                     <tr>
                                         <td width="150">
-                                            <?php echo $v_mobil->id_mobil?>
+                                            <?php echo $no?>
                                         </td>
                                         <td>
                                             <img src="<?php echo base_url('upload/v_mobil/'.$v_mobil->foto_mobil) ?>" width="64" />
                                         </td>
                                         <td>
-                                            <?php echo $v_mobil->id_jenis?>
+                                            <?php echo $v_mobil->nama_jenis?>
                                         </td>
                                         <td>
                                             <?php echo $v_mobil->type_mobil?>
@@ -101,8 +101,7 @@
                                         <td width="250">
                                             <a href="<?php echo site_url('mobil/c_mobil/edit/'.$v_mobil->id_mobil) ?>"
                                              class="btn btn-small"><i class="fa fa-edit"></i> Edit</a>
-                                            <a onclick="deleteConfirm('<?php echo site_url('mobil/c_mobil/delete/'.$v_mobil->id_mobil) ?>')"
-                                             href="#!" class="btn btn-small text-danger"><i class="fa fa-trash"></i> Hapus</a>
+                                            <a href="<?php echo site_url('mobil/c_mobil/delete/'.$v_mobil->id_mobil)?>" class="btn btn-small text-danger"><i class="fa fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                       <?php 
