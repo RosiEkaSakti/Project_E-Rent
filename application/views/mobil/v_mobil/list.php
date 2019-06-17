@@ -61,9 +61,11 @@
                                         <tr>
                                             <th style="width:5px"><center>No</center></th>
                                             <th style="width:200px"><center>Foto Mobil</center></th>
+                                            <th style="width:200px"><center>Id Jenis<center></th>
                                             <th style="width:200px"><center>Type Mobil<center></th>
                                             <th style="width:200px"><center>Merk Mobil<center></th>
                                             <th style="width:200px"><center>No Polisi<center></th>
+                                            <th style="width:200px"><center>Harga<center></th>
                                             <th style="width:200px"><center>Status<center></th>    
                                             <th style="width:30px"><center>Opsi</center></th>
                                         </tr>
@@ -80,6 +82,9 @@
                                             <img src="<?php echo base_url('upload/v_mobil/'.$v_mobil->foto_mobil) ?>" width="64" />
                                         </td>
                                         <td>
+                                            <?php echo $v_mobil->id_jenis?>
+                                        </td>
+                                        <td>
                                             <?php echo $v_mobil->type_mobil?>
                                         </td>
                                         <td>
@@ -87,6 +92,9 @@
                                         </td>
                                         <td>
                                             <?php echo $v_mobil->no_polisi?>
+                                        </td>
+                                        <td>
+                                            <?php echo $v_mobil->harga?>
                                         </td>
                                         <td class="small">
                                             <?php echo $v_mobil->status?></td>

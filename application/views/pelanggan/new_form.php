@@ -41,7 +41,7 @@
 				<?php endif; ?>
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('mobil/c_mobil/') ?>"> <button class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back</button> </a>
+						<a href="<?php echo site_url('pelanggan/c_pelanggan/') ?>"> <button class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back</button> </a>
 					</div>
 					<div class="card-body">
 
