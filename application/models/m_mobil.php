@@ -104,34 +104,34 @@ class m_mobil extends CI_Model
     
     public function getById($id)
     {
-        return $this->db->get_where($this->tb_mobil, ["id_mobil" => $id])->row();
+        return $this->db->get_where($this->_table, ["id_mobil" => $id])->row();
     }
 
     public function save()
     {
         $post = $this->input->post();
-        $this->id_mobil = $id["id_mobil"];
+        $this->id_mobil = $post["id_mobil"];
         $this->foto_mobil = $post["foto_mobil"];
-        $this->id_jenis = ($post["id_jenis"]);
         $this->type_mobil = ($post["type_mobil"]);
+        $this->id_jenis = ($post["id_jenis"]);
         $this->merk = ($post["merk"]);
         $this->no_polisi = ($post["no_polisi"]);
         $this->warna = ($post["warna"]);
         $this->harga = ($post["harga"]);
         $this->status = ($post["status"]);
-        $this->db->insert($this->tb_mobil, $this);
+        $this->db->insert($this->_table, $this);
     }
 
     public function update($user)
     {
         $post = $this->input->post();
-        $this->id_mobil = $post["id_mobil"];
-        $this->db->update($this->tb_mobil, $user, array("id_mobil" => $post['id_mobil']));
+        $this->id_mobil = $post["id"];
+        $this->db->update($this->_table, $user, array("id_mobil" => $post['id']));
     }
 
     public function delete($id)
     {
-        return $this->db->delete($this->tb_mobil, array("id_mobil" => $id));
+        return $this->db->delete($this->_table, array("id_mobil" => $id));
     }
 
     public function get_view(){

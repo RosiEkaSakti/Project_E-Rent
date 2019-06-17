@@ -112,7 +112,7 @@ class m_transaksibiaya extends CI_Model
         $this->id_transaksibiaya = $post["id_transaksibiaya"];
         $this->tgl_sewa = $post["tgl_sewa"];
         $this->id_mobil = $post["id_mobil"];
-        $this->no_ktp ($post["no_ktp"]);
+        $this->no_ktp = ($post["no_ktp"]);
         $this->nama_lengkap = ($post["nama_lengkap"]);
         $this->harga = ($post["harga"]);
         $this->jumlah_harga = ($post["jumlah_harga"]);
