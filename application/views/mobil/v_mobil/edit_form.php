@@ -14,7 +14,7 @@
             <h1 class="page-header">Admin</h1>
             <ol class="breadcrumb">
                 <li class="active">
-                    <i class="fa fa-arrow-circle-o-right"></i>Edit Admin E-RENT
+                    <i class="fa fa-arrow-circle-o-right"></i>Edit Mobil E-RENT
                 </li>
             </ol>
         </div>
