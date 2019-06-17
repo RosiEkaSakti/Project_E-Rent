@@ -3,7 +3,6 @@
 class m_pengembalian extends CI_Model
 {
     private $_table = "tb_pengembalian";
-
     public $id_pengembalian;
     public $id_transaksi;
     public $harga;
@@ -21,12 +20,12 @@ class m_pengembalian extends CI_Model
             'rules' => 'numeric'],
             
             ['field' => 'harga',
-            'label' => 'Description',
-            'rules' => 'required']
+            'label' => 'numeric',
+            'rules' => 'required'],
 
             ['field' => 'terlambat',
             'label' => 'Description',
-            'rules' => 'required']
+            'rules' => 'required'],
         ];
     }
 
@@ -38,17 +37,17 @@ class m_pengembalian extends CI_Model
             'rules' => 'numeric'],
 
             ['field' => 'id_transaksi',
-            'label' => 'username',
+            'label' => 'No',
             'rules' => 'required'],
             
             ['field' => 'harga',
-            'label' => 'Description',
-            'rules' => 'required']
+            'label' => 'No',
+            'rules' => 'required'],
 
             ['field' => 'terlambat',
             'label' => 'Description',
-            'rules' => 'required']
-           ], 
+            'rules' => 'required'],
+           
         ];
     }
 
@@ -59,7 +58,7 @@ class m_pengembalian extends CI_Model
     
     public function getById($id)
     {
-        return $this->db->get_where($this->_table, ["id_user" => $id])->row();
+        return $this->db->get_where($this->_table, ["id_pengembalian" => $id])->row();
     }
 
     public function save()

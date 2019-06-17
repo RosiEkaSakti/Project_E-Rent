@@ -57,7 +57,7 @@
 
                             <div class="form-group">
                                 <label for="name">No KTP</label>
-                                <input class="form-control <?php echo form_error('foto_mobil') ? 'is-invalid':'' ?>"
+                                <input class="form-control <?php echo form_error('no_ktp') ? 'is-invalid':'' ?>"
                                  type="file" name="no_ktp" min="0" placeholder="no_ktp" value="<?= $v_pelanggan->no_ktp ?>" />
                                 <div class="invalid-feedback">
                                     <?php echo form_error('no_ktp') ?>

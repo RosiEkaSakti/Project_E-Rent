@@ -80,7 +80,7 @@
                                         foreach ($data as $v_pelanggan): ?>
                                     <tr>
                                         <td width="150">
-                                            <?php echo $id_pelanggan; ?>
+                                            <?php echo $v_pelanggan->id_pelanggan?>
                                         </td>
                                         <td>
                                             <?php echo $v_pelanggan->no_ktp?>

@@ -87,9 +87,9 @@
                                         <td class="small">
                                             <?php echo $v_pengembalian->terlambat?></td>
                                         <td width="250">
-                                            <a href="<?php echo site_url('pengembalian/c_pengembalian/edit/'.$v_pengembalian-->id_pengembalian) ?>"
+                                            <a href="<?php echo site_url('pengembalian/c_pengembalian/edit/'.$v_pengembalian->id_pengembalian) ?>"
                                              class="btn btn-small"><i class="fa fa-edit"></i> Edit</a>
-                                            <a onclick="deleteConfirm('<?php echo site_url('pengembalian/c_pengembalian/delete/'.$v_pengembalian-->id_pengembalian) ?>')"
+                                            <a onclick="deleteConfirm('<?php echo site_url('pengembalian/c_pengembalian/delete/'.$v_pengembalian->id_pengembalian) ?>')"
                                              href="#!" class="btn btn-small text-danger"><i class="fa fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>

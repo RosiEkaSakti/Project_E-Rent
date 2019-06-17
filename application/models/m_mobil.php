@@ -3,14 +3,12 @@
 class m_mobil extends CI_Model
 {
     private $_table = "tb_mobil";
-
     public $id_mobil;
     public $foto_mobil;
     public $id_jenis;
     public $type_mobil;
     public $merk;
     public $no_polisi;
-    public $warna;
     public $harga;
     public $status;  
 
@@ -104,22 +102,21 @@ class m_mobil extends CI_Model
     
     public function getById($id)
     {
-        return $this->db->get_where($this->tb_mobil, ["id_mobil" => $id])->row();
+        return $this->db->get_where($this->_table, ["id_mobil" => $id])->row();
     }
 
     public function save()
     {
         $post = $this->input->post();
-        $this->id_mobil = $id["id_mobil"];
+        $this->id_mobil = $post["id_mobil"];
         $this->foto_mobil = $post["foto_mobil"];
-        $this->id_jenis = ($post["id_jenis"]);
-        $this->type_mobil = ($post["type_mobil"]);
-        $this->merk = ($post["merk"]);
-        $this->no_polisi = ($post["no_polisi"]);
-        $this->warna = ($post["warna"]);
-        $this->harga = ($post["harga"]);
-        $this->status = ($post["status"]);
-        $this->db->insert($this->tb_mobil, $this);
+        $this->id_jenis = $post["id_jenis"];
+        $this->type_mobil = $post["type_mobil"];
+        $this->merk = $post["merk"];
+        $this->no_polisi = $post["no_polisi"];
+        $this->harga = $post["harga"];
+        $this->status = $post["status"];
+        $this->db->insert($this->_table, $this);
     }
 
     public function update($user)
