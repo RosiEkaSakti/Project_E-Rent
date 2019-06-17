@@ -58,7 +58,7 @@ html>
                             <div class="form-group">
                                 <label for="name">id transaksi</label>
                                 <input class="form-control <?php echo form_error('id_transaksi') ? 'is-invalid':'' ?>"
-                                 type="file" name="id_transaksi" min="0" placeholder="id_transaksi" value="<?= $v_pengembalian->id_transaksi ?>" />
+                                 type="text" name="id_transaksi" min="0" placeholder="id_transaksi" value="<?= $v_pengembalian->id_transaksi ?>" />
                                 <div class="invalid-feedback">
                                     <?php echo form_error('id_transaksi') ?>
                                 </div>

@@ -49,7 +49,7 @@ public function index(){
             $this->session->set_flashdata('success', 'Berhasil disimpan'); 
         }
 
-        $data["v_pengembalian"] = $v_admin->getById($id); // mengambil data untuk ditampilkan pada form
+        $data["v_pengembalian"] = $v_pengembalian->getById($id); // mengambil data untuk ditampilkan pada form
         $data['sidebar'] = 'v_sidebar';
         if (!$data["v_pengembalian"]) show_404(); //jika tidak ada data, tampilkan error 404
         

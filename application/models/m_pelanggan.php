@@ -159,8 +159,19 @@ class m_pelanggan extends CI_Model
     public function update($user)
     {
         $post = $this->input->post();
-        $this->id_pelanggan = $post["id"];
-        $this->db->update($this->_table, $user, array('id_pelanggan' => $post['id']));
+        $this->id_pelanggan = $post["id_pelanggan"];
+        $this->no_ktp = $post["no_ktp"];
+        $this->foto_pelanggan = ($post[""]);
+        $this->nama_lengkap = ($post["nama_lengkap"]);
+        $this->tanggal_lahir = ($post["tanggal_lahir"]);
+        $this->jenis_kelamin = ($post["jenis_kelamin"]);
+        $this->username = ($post["username"]);
+        $this->password = ($post["password"]);
+        $this->alamat_pelanggan = ($post["alamat_pelanggan"]);
+        $this->no_telepon = ($post["no_telepon"]);
+        $this->email = ($post["email"]);
+        $this->status_peminjaman = ($post["status_peminjaman"]);
+        $this->db->update($this->_table, $user, array('id_pelanggan' => $post['id_pelanggan']));
     }
 
     public function delete($id)

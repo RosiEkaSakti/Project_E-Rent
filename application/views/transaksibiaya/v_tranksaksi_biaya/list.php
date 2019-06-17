@@ -34,8 +34,8 @@
              <div class="panel panel-primary">
                
                         <div class="panel-heading">
-                          <a href="<?php echo base_url().'transaksi/c_transaksi_biaya/add'?> ">
-                            <button data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Pelanggan</button>
+                          <a href="<?php echo base_url().'transaksibiaya/c_transaksi_biaya/add'?> ">
+                            <button data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Transaksi</button>
                           </a>
                         </div>
                         <div class="panel-body">

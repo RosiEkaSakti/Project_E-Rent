@@ -49,7 +49,7 @@ class c_pembayaran extends CI_Controller {
             $this->session->set_flashdata('success', 'Berhasil disimpan'); 
         }
 
-        $data["v_pembayaran"] = $v_admin->getById($id); // mengambil data untuk ditampilkan pada form
+        $data["v_pembayaran"] = $v_pembayaran->getById($id); // mengambil data untuk ditampilkan pada form
         $data['sidebar'] = 'v_sidebar';
         if (!$data["v_pembayaran"]) show_404(); //jika tidak ada data, tampilkan error 404
         

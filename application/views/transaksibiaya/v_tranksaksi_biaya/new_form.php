@@ -29,7 +29,7 @@
 				<?php endif; ?>
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('transaksibiaya/c_transaksibiaya/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
+						<a href="<?php echo site_url('transaksibiaya/c_transaksibiaya/list') ?>"><i class="fas fa-arrow-left"></i> Back</a>
 					</div>
 					<div class="card-body">
 

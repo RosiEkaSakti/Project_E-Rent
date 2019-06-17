@@ -58,7 +58,7 @@
                             <div class="form-group">
                                 <label for="name">No KTP</label>
                                 <input class="form-control <?php echo form_error('no_ktp') ? 'is-invalid':'' ?>"
-                                 type="file" name="no_ktp" min="0" placeholder="no_ktp" value="<?= $v_pelanggan->no_ktp ?>" />
+                                 type="text" name="no_ktp" min="0" placeholder="no_ktp" value="<?= $v_pelanggan->no_ktp ?>" />
                                 <div class="invalid-feedback">
                                     <?php echo form_error('no_ktp') ?>
                                 </div>
@@ -67,7 +67,7 @@
                             <div class="form-group">
                                 <label for="name">Foto Pelanggan*</label>
                                 <input class="form-control <?php echo form_error('foto_pelanggan') ? 'is-invalid':'' ?>"
-                                 type="tetxt" name="foto_pelanggan" placeholder="foto_pelanggan" value="<?= $v_pelanggan->foto_pelanggan ?>" />
+                                 type="file" name="foto_pelanggan" placeholder="foto_pelanggan" value="<?= $v_pelanggan->foto_pelanggan ?>" />
                                 <div class="invalid-feedback">
                                     <?php echo form_error('foto_pelanggan') ?>
                                 </div>
@@ -85,7 +85,7 @@
                             <div class="form-group">
                                 <label for="name">Tanggal Lahir*</label>
                                 <input class="form-control <?php echo form_error('tanggal_lahir') ? 'is-invalid':'' ?>"
-                                 type="text" name="tanggal_lahir" placeholder="tanggal_lahir" value="<?= $v_pelanggan->tanggal_lahir ?>" />
+                                 type="date" name="tanggal_lahir" placeholder="tanggal_lahir" value="<?= $v_pelanggan->tanggal_lahir ?>" />
                                 <div class="invalid-feedback">
                                     <?php echo form_error('tanggal_lahir') ?>
                                 </div>

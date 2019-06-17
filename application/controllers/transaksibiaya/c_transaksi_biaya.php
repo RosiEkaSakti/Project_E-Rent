@@ -33,7 +33,7 @@ public function index(){
         $data = array (
              'sidebar' => 'v_sidebar',
             );
-        $this->load->view("transaksibiaya/v_tranksaksi_biaya/new_form", $data); //tampilkan form add
+        $this->load->view("transaksibiaya/new_form", $data); //tampilkan form add
     }
 
     public function edit($id = null)

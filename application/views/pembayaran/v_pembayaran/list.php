@@ -34,8 +34,8 @@
              <div class="panel panel-primary">
                
                         <div class="panel-heading">
-                          <a href="<?php echo base_url().'transaksi/c_transaksi_biaya/add'?> ">
-                            <button data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Pelanggan</button>
+                          <a href="<?php echo base_url().'pembayaran/c_pembayaran/add'?> ">
+                            <button data-toggle="modal" data-target="new_form" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> Tambah Data Pembayaran</button>
                           </a>
                         </div>
                         <div class="panel-body">
@@ -94,12 +94,10 @@
                                         </td>
                                         <td>
                                             <?php echo $v_pembayaran->atas_nama?>
-                                        
-                                       
-                                        <td width="250">
-                                            <a href="<?php echo site_url('pembayaran/c_pembayaran/edit/'.$v_pembayaran->id_pembayaran) ?>"
+                                         <td width="250">
+                                            <a href="<?php echo site_url('pembayaran/c_pembayaran/edit/'.$v_pembayaran->id_bayar) ?>"
                                              class="btn btn-small"><i class="fa fa-edit"></i> Edit</a>
-                                            <a onclick="deleteConfirm('<?php echo site_url('pembayaran/c_pembayaran/delete/'.$v_v_pembayaran->id_pembayran) ?>')"
+                                            <a onclick="deleteConfirm('<?php echo site_url('pembayaran/c_pembayaran/delete/'.$v_pembayaran->id_bayar) ?>')"
                                              href="#!" class="btn btn-small text-danger"><i class="fa fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>

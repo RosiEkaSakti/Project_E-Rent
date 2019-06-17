@@ -85,7 +85,7 @@ class m_pembayaran extends CI_Model
     
     public function getById($id)
     {
-        return $this->db->get_where($this->_table, ["id_pembayaran" => $id])->row();
+        return $this->db->get_where($this->_table, ["id_bayar" => $id])->row();
     }
 
     public function save()
@@ -104,13 +104,13 @@ class m_pembayaran extends CI_Model
     public function update($user)
     {
         $post = $this->input->post();
-        $this->id_pembayaran = $post["id"];
-        $this->db->update($this->_table, $user, array('id_pembayaran' => $post['id']));
+        $this->id_bayar = $post["id"];
+        $this->db->update($this->_table, $user, array('id_bayar' => $post['id']));
     }
 
     public function delete($id)
     {
-        return $this->db->delete($this->_table, array("id_pembayaran" => $id));
+        return $this->db->delete($this->_table, array("id_bayar" => $id));
     }
 
     public function get_view(){

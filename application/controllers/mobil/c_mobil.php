@@ -11,7 +11,7 @@ class c_mobil extends CI_Controller {
 
 	public function index(){
         //memanggil file view
-
+        
         $data = array (
              'sidebar' => 'v_sidebar',
             'data' => $this->m_mobil->get_view());

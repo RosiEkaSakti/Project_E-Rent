@@ -45,72 +45,72 @@
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url('transaksibiaya/c_transaksibiaya/add') ?>" method="post" enctype="multipart/form-data" >
-							<div class="form-group">
-								<label for="name">tgl sewa</label>
-								<input class="form-control <?php echo form_error('tgl_sewa') ? 'is-invalid':'' ?>"
-								 type="number" name="tgl_sewa" placeholder="tgl_sewa" />
-								<div class="invalid-feedback">
-									<?php echo form_error('id_transaksibiaya') ?>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="name">id mobil</label>
-								<input class="form-control <?php echo form_error('id_mobil') ? 'is-invalid':'' ?>"
-								 type="file" name="id_mobil" min="0" placeholder="id_mobil" />
-								<div class="invalid-feedback">
-									<?php echo form_error('id_transaksibiaya') ?>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="name">no ktp</label>
-								<input class="form-control <?php echo form_error('no_ktp') ? 'is-invalid':'' ?>"
-								 type="tetxt" name="no_ktp" placeholder="no_ktp" />
-								<div class="invalid-feedback">
-									<?php echo form_error('id_transaksibiaya') ?>
-								</div>
-							</div>
-
-								 <div class="form-group">
-                                <label for="name">nama lengkap</label>
-                                <input class="form-control <?php echo form_error('nama_lengkap') ? 'is-invalid':'' ?>"
-                                 type="text" name="nama_lengkap" placeholder="nama_lengkap"value="<?= $v_transaksibiaya->nama_lengkap?>" />
+						 <form action="<?php base_url('transaksibiaya/c_transaksibiaya/add') ?>" method="post" enctype="multipart/form-data" >
+                            <div class="form-group">
+                                <label for="name">tgl sewa</label>
+                                <input class="form-control <?php echo form_error('tgl_sewa') ? 'is-invalid':'' ?>"
+                                 type="number" name="tgl_sewa" placeholder="tgl_sewa"  />
                                 <div class="invalid-feedback">
                                     <?php echo form_error('id_transaksibiaya') ?>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">id mobil</label>
+                                <input class="form-control <?php echo form_error('id_mobil') ? 'is-invalid':'' ?>"
+                                 type="file" name="id_mobil" min="0" placeholder="id_mobil" />
+                                <div class="invalid-feedback">
+                                    <?php echo form_error('id_transaksibiaya') ?>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">no ktp</label>
+                                <input class="form-control <?php echo form_error('no_ktp') ? 'is-invalid':'' ?>"
+                                 type="tetxt" name="no_ktp" placeholder="no_ktp"  />
+                                <div class="invalid-feedback">
+                                    <?php echo form_error('no_ktp') ?>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">nama lengkap</label>
+                                <input class="form-control <?php echo form_error('nama_lengkap') ? 'is-invalid':'' ?>"
+                                 type="text" name="nama_lengkap" placeholder="nama_lengkap" />
+                                <div class="invalid-feedback">
+                                    <?php echo form_error('nama_lengkap') ?>
                                 </div>
                             </div>
 
                              <div class="form-group">
                                 <label for="name">harga</label>
                                 <input class="form-control <?php echo form_error('harga') ? 'is-invalid':'' ?>"
-                                 type="number" name="harga" placeholder="harga" value="<?= $v_transaksibiaya->id_harga ?>" />
+                                 type="number" name="harga" placeholder="harga"  />
                                 <div class="invalid-feedback">
-                                    <?php echo form_error('id_transaksibiaya') ?>
+                                    <?php echo form_error('id_harga') ?>
                                 </div>
                                 <div class="form-group">
                                 <label for="name">jumlah harga</label>
                                 <input class="form-control <?php echo form_error('jumlah_harga') ? 'is-invalid':'' ?>"
-                                 type="text" name="jumlah_harga" placeholder="jumlah_harga"value="<?= $v_transaksibiaya->jumlah_harga?>" />
+                                 type="text" name="jumlah_harga" placeholder="jumlah_harga" />
                                 <div class="invalid-feedback">
-                                    <?php echo form_error('id_transaksibiaya') ?>
+                                    <?php echo form_error('nama_lengkap') ?>
                                 </div>
                                 <div class="form-group">
                                 <label for="name">denda</label>
                                 <input class="form-control <?php echo form_error('denda') ? 'is-invalid':'' ?>"
-                                 type="text" name="denda" placeholder="denda"value="<?= $v_transaksibiaya->denda?>" />
+                                 type="text" name="denda" placeholder="denda" />
                                 <div class="invalid-feedback">
-                                    <?php echo form_error('id_transaksibiaya') ?>
+                                    <?php echo form_error('denda') ?>
                                 </div>
                                 <div class="form-group">
                                 <label for="name">total harga</label>
                                 <input class="form-control <?php echo form_error('total_harga') ? 'is-invalid':'' ?>"
-                                 type="text" name="total_harga" placeholder="total_harga"value="<?= $v_transaksibiaya->total_harga?>" />
+                                 type="text" name="total_harga" placeholder="total_harga"/>
                                 <div class="invalid-feedback">
-                                    <?php echo form_error('id_transaksibiaya') ?>
+                                    <?php echo form_error('total_harga') ?>
                                 </div>
-							</div>
+
 
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>
