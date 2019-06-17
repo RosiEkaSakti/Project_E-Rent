@@ -39,9 +39,8 @@
 								<input class="form-control <?php echo form_error('id_pengembalian') ? 'is-invalid':'' ?>"
 								 type="number" name="id_pengembalian" placeholder="id_pengembalian" />
 								<div class="invalid-feedback">
-									<?php echo form_error('id_pengembalian) ?>
+									<?php echo form_error('id_pengembalian') ?>
 								</div>
-							</div>
 
 							<div class="form-group">
 								<label for="name">id transaksi</label>
