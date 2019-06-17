@@ -48,7 +48,6 @@ class m_admin extends CI_Model
     public function save()
     {
         $post = $this->input->post();
-        $this->id_user = $id["id_user"];
         $this->username = $post["username"];
         $this->password = md5($post["password"]);
         $this->db->insert($this->_table, $this);

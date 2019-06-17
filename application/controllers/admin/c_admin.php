@@ -26,7 +26,7 @@ class c_admin extends CI_Controller {
         $validation->set_rules($v_admin->rules()); // terapkan rules
 
         if ($validation->run()) { // melakukan validasi
-            $v_admin->save(); // simpan dat ke database
+            $v_admin->save(); // simpan data ke database
             $this->session->set_flashdata('success', 'Berhasil disimpan'); // tampilkan pesan berhasil
         }
         $data = array (
