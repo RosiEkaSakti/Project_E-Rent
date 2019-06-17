@@ -45,7 +45,7 @@
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url('mobil/v_mobil/add') ?>" method="post" enctype="multipart/form-data" >
+						<form action="<?php base_url('mobil/c_mobil/add') ?>" method="post" enctype="multipart/form-data" >
 							<div class="form-group">
 								<label for="name">No*</label>
 								<input class="form-control <?php echo form_error('id_mobil') ? 'is-invalid':'' ?>"
@@ -62,15 +62,6 @@
 								<div class="invalid-feedback">
 									<?php echo form_error('foto_mobil') ?>
 								</div>
-
-							</div>
-								<div class="form-group">
-								<label for="name">Id Jenis*</label>
-								<input class="form-control <?php echo form_error('id_jenis') ? 'is-invalid':'' ?>"
-								 type="tetxt" name="id_jenis" placeholder="id_jenis" />
-								<div class="invalid-feedback">
-									<?php echo form_error('id_jenis') ?>
-								</div>
 							</div>
 
 							<div class="form-group">
@@ -79,6 +70,15 @@
 								 type="tetxt" name="type_mobil" placeholder="type_mobil" />
 								<div class="invalid-feedback">
 									<?php echo form_error('type_mobil') ?>
+								</div>
+							</div>
+
+								<div class="form-group">
+								<label for="name">Id Jenis*</label>
+								<input class="form-control <?php echo form_error('id_jenis') ? 'is-invalid':'' ?>"
+								 type="tetxt" name="id_jenis" placeholder="id_jenis" />
+								<div class="invalid-feedback">
+									<?php echo form_error('id_jenis') ?>
 								</div>
 							</div>
 
@@ -117,7 +117,6 @@
 									<?php echo form_error('status') ?>
 								</div>
 							</div>
-
 
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>

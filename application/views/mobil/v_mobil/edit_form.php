@@ -85,10 +85,10 @@
 
                             <div class="form-group">
                                 <label for="name">Merk Mobil*</label>
-                                <input class="form-control <?php echo form_error('merk') ? 'is-invalid':'' ?>"
-                                 type="text" name="merk" placeholder="merk" value="<?= $v_mobil->merk ?>" />
+                                <input class="form-control <?php echo form_error('merk_mobil') ? 'is-invalid':'' ?>"
+                                 type="text" name="merk_mobil" placeholder="merk_mobil"value="<?= $v_mobil->merk_mobil ?>" />
                                 <div class="invalid-feedback">
-                                    <?php echo form_error('merk') ?>
+                                    <?php echo form_error('merk_mobil') ?>
                                 </div>
                             </div>
 
