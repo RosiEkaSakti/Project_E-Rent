@@ -47,7 +47,7 @@
 
                        <form action="<?php base_url('pelanggan/c_pelanggan/add') ?>" method="post" enctype="multipart/form-data" >
                             <div class="form-group">
-                                <label for="name">No*</label>
+                                <label for="name">Id Pelanggan*</label>
                                 <input class="form-control <?php echo form_error('id_pelanggan') ? 'is-invalid':'' ?>"
                                  type="number" name="id_pelanggan" placeholder="id_pelanggan" value="<?= $v_pelanggan->id_pelanggan ?>" />
                                 <div class="invalid-feedback">
